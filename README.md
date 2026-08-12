@@ -226,4 +226,6 @@ LLMJudge 逐条评分：{"helpfulness":{score,reason}, "slot_completeness":{scor
 
 ---
 
-> **GitHub 仓库**：待推送后补充链接（见 `PROCESS.md` 决策记录）。
+> **GitHub 仓库**：https://github.com/BrokingCz/auto-reply-quality-evaluator
+>
+> **完整设计决策档案**：见 [PROCESS.md](PROCESS.md)（评审团投票记录、校准全过程）。
