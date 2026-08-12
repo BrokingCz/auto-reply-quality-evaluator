@@ -1,0 +1,14 @@
+# 密钥与环境
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 运行时产物（保留 output/ 下的报告；临时文件不入库）
+output/*.tmp
+
+# 系统
+Thumbs.db
+.DS_Store

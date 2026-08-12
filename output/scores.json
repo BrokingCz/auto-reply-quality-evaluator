@@ -1,0 +1,642 @@
+[
+  {
+    "id": "case_01",
+    "user_question": "我的快递到了但是放错快递柜了，取不出来",
+    "auto_reply": "您好，如果快递放错了快递柜，您可以尝试联系快递员重新派送，或者到放错的快递柜去取。建议您先查看取件码确认具体位置。如果无法解决，请联系我们的客服，我们会协助您处理。",
+    "scores": {
+      "helpfulness": {
+        "score": 2,
+        "reason": "把查柜、联系快递员、联系客服等动作全推给用户，未主动承接解决"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未追问订单号/快递单号/快递柜名称等关键信息，无法定位问题",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "建议查看取件码、联系快递员等说法符合常规流程，无事实错误"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "语气礼貌，但缺乏对用户焦急情绪的共情安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造政策或赔偿，所有建议均为行业通用做法"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 2.5,
+    "bucket": "差"
+  },
+  {
+    "id": "case_02",
+    "user_question": "这个充电宝能带上飞机吗",
+    "auto_reply": "您好，关于充电宝是否能带上飞机，根据民航局规定，额定能量不超过100Wh的充电宝可以随身携带上飞机，但不能托运。建议您查看充电宝的额定容量标识。如有疑问，请咨询具体航空公司。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "提供了通用政策，但未主动帮用户判断其具体充电宝是否符合，需用户自行查标识"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未识别必要槽位：未询问用户充电宝的额定容量/型号/标识信息，无法针对性判断",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "民航局100Wh随身携带、禁托运的规定准确无误"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "礼貌得体，但无情绪安抚或共情表达"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "所有政策描述均真实可溯源，未编造任何细节"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 3.0,
+    "bucket": "中"
+  },
+  {
+    "id": "case_03",
+    "user_question": "退款什么时候能到账",
+    "auto_reply": "退款到账时间取决于退款方式和银行处理速度。一般情况下：原路退回（支付宝/微信）1-3个工作日，银行卡退款3-7个工作日，信用卡退款5-15个工作日。您可以在订单详情页查看退款进度。如果超时未到账，请联系客服。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "给出通用时效范围，但未查具体订单状态，把进度查询和异常处理推给用户"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未识别需订单号/支付方式等槽位以判断具体退款路径和时效",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "各支付渠道到账时效描述符合主流平台常规政策"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "语气礼貌中性，但无情绪安抚或个性化关怀"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造政策，时效范围属行业常见表述，可溯源"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 3.0,
+    "bucket": "中"
+  },
+  {
+    "id": "case_04",
+    "user_question": "我买的蓝牙耳机左耳没声音了，才买三天",
+    "auto_reply": "抱歉给您带来不便。蓝牙耳机出现单侧无声的情况，建议您尝试以下操作：1.将耳机放回充电盒重新配对 2.检查手机蓝牙设置中是否有单声道选项 3.尝试重启耳机。如果问题仍然存在，由于在7天质保期内，您可以申请退货退款或换新。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "提供了基础排查步骤和质保政策，但未主动查单/承诺处理，把解决动作推给用户自行操作"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未索要订单号、商品型号、是否已尝试重启等关键信息，无法针对性判断原因或推进售后",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "7天质保期内可退换符合平台通用售后政策，排查步骤也属常见有效方法"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "开头致歉，语气礼貌，但缺乏对用户焦急情绪的共情安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造政策、时效或赔偿，所述质保期和处理方式为平台常规规则"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 3.0,
+    "bucket": "中"
+  },
+  {
+    "id": "case_05",
+    "user_question": "你们客服态度太差了等了20分钟都没人理我",
+    "auto_reply": "非常抱歉让您久等了，给您带来了不好的体验。我们非常重视每一位客户的感受。请问您遇到了什么问题？我现在就帮您处理。同时我们会加强客服团队的培训，避免类似情况再次发生。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "未主动解决等待问题，仅道歉并泛泛询问问题"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未识别需追问具体业务问题及等待场景，直接跳转问新问题",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "道歉和改进承诺表述无事实错误"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "礼貌致歉并表达重视，但缺乏对用户焦急情绪的针对性安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造政策、时效或赔偿等具体事实"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 3.0,
+    "bucket": "中"
+  },
+  {
+    "id": "case_06",
+    "user_question": "优惠券怎么用不了",
+    "auto_reply": "您好，优惠券无法使用可能有以下原因：1.未达到使用门槛金额 2.商品不在优惠券适用范围内 3.优惠券已过期 4.优惠券已使用过。请您检查优惠券的使用规则。如果确认符合使用条件仍无法使用，请联系客服核实。",
+    "scores": {
+      "helpfulness": {
+        "score": 2,
+        "reason": "把问题全推给用户自查，未主动查券或提供验证路径"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未识别必要槽位：未问优惠券ID/订单号/具体商品，无法定位原因",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "所列4个原因均符合平台常见规则，无事实错误"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "语气礼貌，但缺乏对用户 frustration 的共情安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造任何政策或数字，表述均为通用客观原因"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 2.5,
+    "bucket": "差"
+  },
+  {
+    "id": "case_07",
+    "user_question": "我收到短信说账号异地登录了是真的吗",
+    "auto_reply": "您好，异地登录提醒可能是真实的也可能是诈骗短信。请您先不要点击短信中的任何链接。建议您：1.直接登录我们的官方网站或APP查看登录记录 2.修改密码 3.开启二次验证功能。如果确认存在异常登录，请立即联系客服冻结账号。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "给出3条自助操作建议，但未主动查账号状态或核实登录真伪，把关键动作全推给用户"
+      },
+      "slot_completeness": {
+        "score": 5,
+        "reason": "该问题无需额外槽位即可响应，用户仅需风险提示和基础防护指引",
+        "needs_slot": false
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "异地登录提醒确有真假可能，建议操作符合安全规范，无事实错误"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "语气礼貌，有风险提示，但未针对用户可能的焦虑情绪主动安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "所有建议均为通用安全实践，未编造政策、流程或具体数字"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 3.9,
+    "bucket": "中"
+  },
+  {
+    "id": "case_08",
+    "user_question": "这个手机壳是硅胶的还是塑料的",
+    "auto_reply": "您好，这款手机壳采用的是TPU软胶材质，具有较好的防摔性能和手感。如果您需要更具体的材质信息，可以查看商品详情页的参数说明，或联系客服获取。",
+    "scores": {
+      "helpfulness": {
+        "score": 4,
+        "reason": "直接说明TPU软胶材质，已解答核心问题，但未主动提供详情页截图或进一步解释TPU与硅胶/塑料的关系"
+      },
+      "slot_completeness": {
+        "score": 5,
+        "reason": "问题无需额外槽位，用户仅询问材质类型，已明确回答",
+        "needs_slot": false
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "TPU是热塑性聚氨酯，属软胶类，既非纯硅胶也非硬塑料，表述准确"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "礼貌专业，但无情绪共情，用户未表露情绪故无需强安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "TPU材质描述真实，未编造参数或政策"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 4.4,
+    "bucket": "好"
+  },
+  {
+    "id": "case_09",
+    "user_question": "退货邮费谁出",
+    "auto_reply": "退货运费承担规则如下：质量问题导致的退货，运费由商家承担；非质量问题（如不喜欢、买错了等）的退货，运费由买家承担。具体判定标准请参考我们的退换货政策。如有疑问请联系客服。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "给出通用规则但未确认用户退货原因，未主动判断或查单，把判定责任推给用户"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未追问关键槽位：退货原因、订单号、是否已寄出，无法针对性判定运费承担方",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "所述质量问题与非质量问题的运费承担规则符合主流平台政策"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "语气礼貌中性，但缺乏对用户潜在焦虑的共情安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造具体政策、数字或承诺，表述为通用客观规则"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 3.0,
+    "bucket": "中"
+  },
+  {
+    "id": "case_10",
+    "user_question": "刚下单还没发货能取消吗",
+    "auto_reply": "您好，订单未发货前可以申请取消。请您在订单详情页操作，或联系客服协助处理。取消后款项会在1-3个工作日退回原支付方式。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "给出可操作路径但未主动承接（如代查订单/代取消），把动作推给用户"
+      },
+      "slot_completeness": {
+        "score": 5,
+        "reason": "问题无需额外槽位即可回答，订单状态明确且通用政策适用",
+        "needs_slot": false
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "未发货可取消、退款时效1-3工作日均符合平台常规政策"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "礼貌得体，但无情绪安抚或共情表达"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "所有信息均为真实通用政策，无编造"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 3.9,
+    "bucket": "中"
+  },
+  {
+    "id": "case_11",
+    "user_question": "买了两件衣服一件大了一件小了想换尺码",
+    "auto_reply": "您好，换货需要先退货再重新下单选择正确尺码。请分别发起两件商品的换货申请，按照退货地址寄回原商品，我们收到后会发出新尺码的商品。换货运费由买家承担。",
+    "scores": {
+      "helpfulness": {
+        "score": 2,
+        "reason": "把全部动作推给用户：自行发起、寄回、重新下单，未主动查单或承接处理"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未追问订单号、商品信息、目标尺码等必要槽位，无法针对性处理",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 4,
+        "reason": "换货流程描述基本正确，但‘换货运费由买家承担’需视平台政策而定，表述绝对化"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "礼貌得体，但无情绪安抚，未回应用户‘大小不合适’的困扰感"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造具体政策或数字，流程描述属常规操作口径"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 2.4,
+    "bucket": "差"
+  },
+  {
+    "id": "case_12",
+    "user_question": "快递两天没更新了",
+    "auto_reply": "物流信息长时间未更新可能是以下原因：1.包裹正在中转途中 2.快递公司信息更新延迟 3.包裹可能出现问题。建议您耐心等待1-2天，如果仍未更新，请联系快递公司查询或联系我们的客服协助跟进。",
+    "scores": {
+      "helpfulness": {
+        "score": 2,
+        "reason": "把查单和跟进动作全推给用户，未主动承接"
+      },
+      "slot_completeness": {
+        "score": 3,
+        "reason": "需订单号才能查物流，但未追问",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "列举原因符合常见物流实际情况"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "用词礼貌，但缺乏对用户焦急情绪的安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造政策或事实，表述客观"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 2.8,
+    "bucket": "差"
+  },
+  {
+    "id": "case_13",
+    "user_question": "我买的面膜成分表能发给我看看吗我皮肤敏感",
+    "auto_reply": "您好，面膜的成分表可以在商品详情页查看。如果您对特定成分过敏，建议您在购买前仔细核对成分表，或先购买小样进行皮肤测试。如需更详细的成分信息，可以联系品牌官方客服。",
+    "scores": {
+      "helpfulness": {
+        "score": 2,
+        "reason": "把查成分表动作全推给用户自行查看详情页，未主动提供或调取成分信息"
+      },
+      "slot_completeness": {
+        "score": 3,
+        "reason": "未追问具体商品/订单/品牌，但成分表需求本身不强制依赖槽位，可查公开页",
+        "needs_slot": false
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "成分表在详情页展示是常规做法，建议小样测试也符合安全规范"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "语气礼貌，提及敏感肌关切，但缺乏针对性安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造政策、数字或不存在的服务，信息真实可验证"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 2.8,
+    "bucket": "差"
+  },
+  {
+    "id": "case_14",
+    "user_question": "你们能不能加个功能下单前能看实物视频",
+    "auto_reply": "感谢您的宝贵建议！我们会将您的反馈转达给产品团队。目前部分商品已支持视频展示，您可以在商品详情页查看是否有视频标识。如果您有特定商品需要看实物，可以联系客服，我们会尽力协助。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "未主动承接开发需求，仅转达建议；未说明当前视频覆盖范围或替代方案"
+      },
+      "slot_completeness": {
+        "score": 5,
+        "reason": "问题为功能建议，无需额外槽位信息",
+        "needs_slot": false
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "表述客观真实，未夸大视频覆盖情况"
+      },
+      "tone": {
+        "score": 5,
+        "reason": "礼貌感谢+积极回应，体现重视与共情"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造政策、数据或承诺，表述严谨"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 4.0,
+    "bucket": "好"
+  },
+  {
+    "id": "case_15",
+    "user_question": "我上次买的东西收到是坏的这次又是坏的",
+    "auto_reply": "非常抱歉连续给您带来不好的体验。我们高度重视商品质量问题。请您先申请退货退款，退货运费由我们承担。同时我们会将您的情况反馈给品控部门，加强对该类商品的质量检查。如有需要，可以申请额外的补偿优惠券。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "给出退货路径和运费承担，但未主动查单/确认商品/订单，依赖用户自行申请"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未追问订单号、商品名称、损坏情况等必要信息，无法针对性处理",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "退货退款、运费承担、反馈品控、补偿优惠券均属常见合规政策"
+      },
+      "tone": {
+        "score": 5,
+        "reason": "主动致歉+共情‘连续’体验，语气诚恳有温度"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造具体赔偿金额/时效/政策，优惠券表述为‘可申请’，留有余地"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 3.1,
+    "bucket": "中"
+  },
+  {
+    "id": "case_16",
+    "user_question": "你们首页推荐的那两款手机哪个好",
+    "auto_reply": "您好，不同手机各有优势，适合的需求也不同。如果您能告诉我具体的使用场景和预算，我可以帮您推荐更合适的选择。您也可以查看商品详情页的用户评价和参数对比来做决策。",
+    "scores": {
+      "helpfulness": {
+        "score": 2,
+        "reason": "未识别具体是哪两款手机，把判断和查询动作全推给用户"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未追问关键槽位：用户所指‘首页推荐的那两款’具体型号/链接",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "表述客观中立，无事实性错误"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "礼貌得体，但缺乏对用户模糊指向的共情引导"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造任何具体参数或政策，表述谨慎真实"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 2.5,
+    "bucket": "差"
+  },
+  {
+    "id": "case_17",
+    "user_question": "我那个退货的事顺便看看快递到没到",
+    "auto_reply": "您好，关于您的两个问题：1.退货进度请在订单详情页查看 2.快递进度可以在物流追踪页面查看。如果您能提供具体的订单号，我可以帮您查询更详细的信息。",
+    "scores": {
+      "helpfulness": {
+        "score": 2,
+        "reason": "把查退货和快递进度全推给用户自行查看，未主动查询或承诺协助"
+      },
+      "slot_completeness": {
+        "score": 4,
+        "reason": "识别需订单号，主动提出可帮查，但未明确追问（如‘请提供订单号’）",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "订单页查退货、物流页查快递是事实正确路径"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "礼貌分点回应，但无情绪安抚，未呼应‘顺便看看’的轻量诉求"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造政策或事实，所有指引真实可操作"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 3.1,
+    "bucket": "中"
+  },
+  {
+    "id": "case_18",
+    "user_question": "那个扫地机器人用了两周就不工作了",
+    "auto_reply": "抱歉给您带来不便。扫地机器人使用两周就出现故障，属于质量问题。您的订单在30天质保期内，可以选择退货退款或者换新。请按照退货地址寄回商品，退货运费由我们承担。如有其他问题请联系客服。",
+    "scores": {
+      "helpfulness": {
+        "score": 3,
+        "reason": "给出退货/换新选项但未主动查单或索要订单号，动作推回用户寄回"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未追问订单号、故障现象等必要信息，无法核实质保及处理方式",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 4,
+        "reason": "30天质保期基本符合行业惯例，但未说明是否含电池等例外部件"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "表达歉意并定性为质量问题，有一定共情但安抚不足"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造具体政策、数字或承诺，表述留有余地"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 2.9,
+    "bucket": "差"
+  },
+  {
+    "id": "case_19",
+    "user_question": "我要买的那个包什么时候补货",
+    "auto_reply": "您好，商品补货时间不固定，建议您关注商品页面或联系客服询问预计到货时间。您也可以将商品加入购物车，补货时系统会自动提醒您。如果长时间未补货，可以考虑查看类似的替代商品。",
+    "scores": {
+      "helpfulness": {
+        "score": 2,
+        "reason": "把查补货时间的动作全推给用户自行关注页面或联系客服"
+      },
+      "slot_completeness": {
+        "score": 3,
+        "reason": "未识别需商品链接/ID才能查具体补货信息，但给出通用路径",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "补货时间不固定、购物车提醒等表述符合平台常规政策"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "礼貌得体，但无针对用户焦急情绪的主动安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造具体时间、政策或赔偿，所有说法均为客观惯例"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 2.8,
+    "bucket": "差"
+  },
+  {
+    "id": "case_20",
+    "user_question": "退货流程太复杂了搞半天都不知道怎么操作",
+    "auto_reply": "抱歉给您带来困扰。退货流程一般包括：1.在订单页面点击退货 2.选择退货原因 3.提交申请等待审核 4.按照退货地址寄回商品。如果您在某个环节遇到问题，可以截图发给客服，我们会协助您操作。",
+    "scores": {
+      "helpfulness": {
+        "score": 2,
+        "reason": "把操作责任全推给用户自行完成，未主动查单或引导具体步骤"
+      },
+      "slot_completeness": {
+        "score": 2,
+        "reason": "未识别需订单号/卡点环节等关键槽位，直接甩通用流程",
+        "needs_slot": true
+      },
+      "accuracy": {
+        "score": 5,
+        "reason": "所述退货步骤符合平台常规流程，无事实错误"
+      },
+      "tone": {
+        "score": 4,
+        "reason": "开头致歉礼貌，但缺乏对用户挫败感的具体共情安抚"
+      },
+      "faithfulness": {
+        "score": 5,
+        "reason": "未编造政策或数字，流程描述为平台通用规则"
+      }
+    },
+    "has_error": false,
+    "gate_triggered": false,
+    "total": 2.5,
+    "bucket": "差"
+  }
+]
