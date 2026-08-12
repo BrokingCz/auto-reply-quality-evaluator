@@ -135,7 +135,7 @@ def render_validation_markdown(v: dict) -> str:
     L.append("| :--- | :--- | :--- |")
     L.append(f"| 三级一致率（好/中/差） | **{v['acc3']:.0%}** | {int(v['acc3'] * v['n'])}/{v['n']} 条与人工同判 |")
     L.append(f"| Cohen's κ | **{v['kappa']:.2f}** | 0.41-0.60 中度一致，0.61-0.80 高度一致 |")
-    L.append(f"| 二元一致率（合格/不合格） | **{v['acc2']:.0%}** | {v['matrix2']} |")
+    L.append(f"| 二元一致率（合格/不合格） | **{v['acc2']:.0%}** | 合格/合格 {v['matrix2']['合格/合格']} · 合格/不合格 {v['matrix2']['合格/不合格']} · 不合格/合格 {v['matrix2']['不合格/合格']} · 不合格/不合格 {v['matrix2']['不合格/不合格']} |")
     L.append(f"| Spearman 排序相关 | **{v['spearman']:.2f}** | 评估总分与人工等级排序的相关 |")
     L.append("")
     L.append(f"**分布对比**：人工标注 好{v['human_dist']['好']}/中{v['human_dist']['中']}/差{v['human_dist']['差']}；评估器 好{v['our_dist']['好']}/中{v['our_dist']['中']}/差{v['our_dist']['差']}\n")
